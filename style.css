@@ -1,28 +1,56 @@
 /* 1 */
 
 .menu {
-  background: var(--Web_service_color-header_color, #cfe7f5);
+  background-color: #cfe7f5;
   display: flex;
-  padding: 12px 20px;
   align-items: center;
   gap: 40px;
   font-family: "Play", sans-serif;
 }
 
+
+.menu-seeword {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.menu-text {
+  display: none;
+}
+.menu-imguser {
+  display: none;
+}
+.menu-imgheart {
+  display: none;
+}
+.menu-link {
+  text-decoration: none;
+  color: #266294;
+  text-align: center;
+  font-family: Play;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
 .menu-img-vector {
   width: 40px;
   height: 30px;
   fill: var(--Web_service_color-Hero_blue, #266294);
+  display: flex;
+  align-items: center;
+  gap: 49px;
 }
 
-.menu-img-award {
+.menu-imgaward {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
   fill: var(--Web_service_color-Hero_blue, #266294);
 }
 
-.menu-img-map-pin {
+.menu-img-mappin {
   margin-top: -47px;
   margin-left: 11px;
   width: 8px;
@@ -54,16 +82,15 @@
 .menu-link {
   display: flex;
   padding: 12px 16px;
+  height: 14px;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border: 2px solid var(--Web_service_color-Hero_blue, #266294);
-  color: var(--Web_service_color-Hero_blue, #266294);
+  border: 2px solid #266294;
+  color: #266294;
   text-align: center;
   font-family: Play;
   font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
   line-height: 1.4;
 }
 
@@ -219,43 +246,41 @@
 /* 2 */
 
 .find {
+  background: url(./imgfind/background.webp) lightgray 50% / cover no-repeat;
+  
 }
 
+
+}
 .find-image {
   width: 390px;
   height: 850px;
-  background: url(imgfind/background.webp) lightgray 50% / cover no-repeat;
 }
 
 .find-smallimg {
-  position: relative;
-  top: 161px;
-  left: 152px;
-  bottom: 683px;
+  position: absolute;
   width: 37px;
-  height: 46px;
+  height: 46px; 
+  position: absolute;
+  z-index: 1;
 }
 
 .find-tittle {
-  position: relative;
-  top: 80px;
-  bottom: 650px;
-  left: 20px;
   color: #f8f7f7;
   font-family: "Roboto Condensed";
   height: 120px;
-  width: 255px;
+  text-transform: uppercase;
+  line-height: 125%; /* 60px */
   font-size: 48px;
   font-weight: 700;
   line-height: 60px;
   text-align: left;
+  max-width: 280px;
+  padding-top: 80px;
+  padding-left: 20px;
 }
 
 .find-subtittle {
-  position: relative;
-  left: 20px;
-  top: 80px;
-  bottom: 626px;
   color: #f8f7f7;
   text-align: center;
   font-family: "Roboto Condensed";
@@ -264,6 +289,7 @@
   /* 24px */
   width: 222px;
   height: 24px;
+  
 }
 
 .find-list {
@@ -285,11 +311,6 @@
   font-size: 16px;
   font-style: normal;
   line-height: 1px;
-  /* 16px */
-  position: relative;
-  left: 20px;
-  right: 382.5px;
-  top: 218px;
   margin-bottom: 24px;
   font-weight: 700;
   padding: 16px 32px 16px 32px;
@@ -307,10 +328,6 @@
   font-optical-sizing: auto;
   font-size: 16px;
   background: none;
-  position: relative;
-  left: 20px;
-  right: 382.5px;
-  top: 190px;
   padding: 16px 32px 16px 32px;
   gap: 10px;
   line-height: 1px;
@@ -319,27 +336,24 @@
   margin: 0;
 }
 
-.find-smallimg {
-  position: relative;
-  z-index: 1;
-}
 
 @media screen and (min-width: 834px) {
-  .find-image {
+  .find {
     background: url(./imgfind/backgroundTablet.webp) lightgray 50% / cover
       no-repeat;
+  }
+  .find-image {
     min-width: 834px;
-    min-height: 1112px;
+    
   }
 
   .find-tittle {
     font-size: 96px;
     width: 509px;
     height: 240px;
-    top: 100px;
-    left: 32px;
     margin-bottom: 24px;
     line-height: 120px;
+    max-width: 509px;
   }
 
   .find-subtittle {
@@ -356,8 +370,6 @@
   .find-smallimg {
     width: 74px;
     height: 90px;
-    top: 266px;
-    left: 302px;
   }
 
   .find-list-item-buttonFind {
@@ -392,10 +404,13 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .find {
+    background-image: url(./imgfind/backgrounddestop.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   .find-image {
-    background: url(./imgfind/backgrounddestop.webp) lightgray 50% / no-repeat;
-    height: 850px;
-    width: 1440px;
   }
 
   .find-tittle {
@@ -413,11 +428,9 @@
   }
 
   .find-smallimg {
-    position: relative;
     width: 83px;
     height: 102px;
-    top: 340px;
-    left: 364px;
+    
   }
 
   .find-subtittle {
@@ -460,10 +473,7 @@
 .criteria {
   padding-bottom: 72px;
 }
-.container {
-  max-width: 375px;
-  margin: 0 auto;
-}
+
 .criteria-title {
   margin-bottom: 26px;
   color: #111;
@@ -490,9 +500,7 @@
   .criteria {
     padding-bottom: 80px;
   }
-  .container {
-    min-width: 770px;
-  }
+  
   .criteria-title {
     text-align: start;
   }
@@ -514,9 +522,7 @@
   .criteria {
     padding-bottom: 104px;
   }
-  .container {
-    max-width: 1280px;
-  }
+  
   .criteria-title {
     font-size: 40px;
   }
@@ -542,12 +548,7 @@ body {
   padding: 0;
   background: #ebf8ff;
 }
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-.tour,
+
 .tour-slide {
   display: flex;
   flex-wrap: wrap;
@@ -563,7 +564,7 @@ body {
   height: auto;
 }
 
-.thelast-tittle {
+.thefamous-tittle {
   color: var(#111);
   text-align: left;
   font-family: "Play", sans-serif;
@@ -573,17 +574,26 @@ body {
   line-height: 100%;
   margin-bottom: 10px;
 }
-.thelast-link {
-  color: var(#266294);
-  text-align: center;
+.thefamous-list-item-tittle {
+  color: var(#111);
+  text-align: left;
+  font-family: Play;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  max-width: 129px;
+}
+.thefamous-list-item-link {
+  color: #266294;
   font-family: "Play", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
   float: right;
+  max-width: 233px;
 }
-
 .thelast-list-itemt-text {
   color: var(#111);
   font-family: "Play";
@@ -591,6 +601,7 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 100%;
+  text-align: left;
 }
 
 .thelast-list-item-textcountry {
@@ -620,7 +631,6 @@ body {
   font-weight: 400;
   line-height: 100%;
 }
-.thelast-list-text,
 .thelast-list-item-text {
   color: var(#111);
   font-family: "Play", sans-serif;
@@ -648,12 +658,10 @@ body {
 }
 
 @media screen and (min-width: 834px) {
-  .container{
-    padding: 0;
+  
+  .tour-item {
   }
-  .tour-item{
-  }
-  .thefamous-tour{
+  .thefamous-tour {
     display: flex;
     column-gap: 10px;
     row-gap: 50px;
@@ -668,21 +676,21 @@ body {
   }
 }
 @media screen and (min-width: 1440px) {
-  .thefamous-tour{
+  .thefamous-tour {
     width: 1280px;
     row-gap: 50px;
     column-gap: 20px;
   }
-  .tour{
+  .tour {
     flex-wrap: nowrap;
     width: 1280px;
     gap: 20px;
   }
-  .star{
+  .star {
     height: 19px;
     width: 19px;
   }
-  .tour-item{
+  .tour-item {
     display: block;
     opacity: 1;
     width: 413px;
@@ -751,9 +759,7 @@ body {
   right: 405px;
 }
 @media screen and (max-width: 992px) {
-  .container {
-    max-width: 800px;
-  }
+  
   .tour-item {
     width: 48%;
   }
@@ -775,9 +781,7 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  .container {
-    max-width: 500px;
-  }
+ 
   .tour-item {
     width: 100%;
   }
