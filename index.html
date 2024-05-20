@@ -29,50 +29,44 @@
       href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./main.css" />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
+  
     <section class="menu">
-      <div class="container-menu"> 
-        <img class="menu-img-vector" src="./imgmenu/burger.svg" alt="vector" />
-        <div class="menu-seeword">
-             <img class="menu-img-earth" src="./imgmenu/earthpin.svg" alt="award" />
-             <img class="menu-img-mappin" src="./imgmenu/mappin.svg" alt="map-pin" />
-             <p class="menu-logo-text">See World</p>
-        </div>
+      
+         <div class="menu-logo">
+        <img
+          class="menu-img-award"
+          src="./imgmenu/award.svg"
+          alt="award"
+        />
+        <img class="menu-img-map-pin" src="./imgmenu/pin.svg" alt="map-pin" />
+        <p class="menu-logo-text">See World</p>
       </div>
       <div class="menu-navigation">
         <p class="menu-text">Головна</p>
         <p class="menu-text">Всі оголошення</p>
         <img
-          class="menu-imgheart"
-          src="./imgmenu/mdicardsheartoutline(1).svg"
+          class="menu-img-heart"
+          src="./imgmenu/heart.svg"
           alt="heart"
         />
-        <img class="menu-imguser" src="./imgmenu/user.svg" alt="user" />
+        <img class="menu-img-user" src="./imgmenu/user.svg" alt="user" />
         <p class="menu-text">Особистий кабінет</p>
       </div>
-     
+      <img class="menu-img-vector" src="./imgmenu/burger.svg" alt="vector" />
       <a class="menu-link" href="">Зареєструватись</a>
+     
+      
     </section>
     <section class="find">
-      <div class="container-find">
+      <div class="container">
         <div class="find-image">
-          <img class="find-smallimg" src="./imgfind/smallballon.webp" alt="smallballon" />
+          <img class="find-smallimg" src="./imgfind/smallballon.webp" alt="" />
           <h1 class="find-tittle">Знайди своє місце</h1>
 
           <h2 class="find-subtittle">Подорожуй зі смаком</h2>
@@ -132,228 +126,360 @@
     </section>
     <section class="thefamous">
       <div class="container">
-        <h1 class="thefamous-tittle">Найпопулярніші країни для подорожей</h1>
-        <ul class="thefamous-list">
-          <li class="thefamous-list-item">
-            <h2 class="thefamous-list-item-tittle">Франція</h2>
-            <a class="thefamous-list-item-link" href=""
-              >Відкрити всі оголошення</a
+        <div id="popular_countries">
+          <h1 class="thelast-tittle">Найпопулярніші країни для подорожей</h1>
+          <div class="view-toggle"></div>
+          <div>
+            <h2 class="thelast-tittle">Франція</h2>
+            <div>
+              <a class="thelast-link" href="">Відкрити всі оголошення</a
+              ><br /><br />
+            </div>
+            <div class="arrow arrow-left" onclick="moveCarousel('left')">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="80"
+                height="100"
+                viewBox="0 0 80 100"
+                fill="none"
+              >
+                <path
+                  d="M48.6667 33L32 49.6667L48.6667 66.3333"
+                  stroke="#266294"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <ul id="france_section">
+              <li class="thefamous">
+                <img src="./image/01.webp" alt="Nantes" />
+                <p class="thelast-list-item-text">Nantes <br />10 753 готелів</p>
+              </li>
+              <li class="thefamous">
+                <img src="./image/02.webp" alt="Montpellier" />
+                <p class="thelast-list-item-text">
+                  Montpellier<br />
+                  11 386 готелів
+                </p>
+              </li>
+              <li class="thefamous third-tour">
+                <img src="./image/03.webp" alt="Paris" />
+                <p class="thelast-list-item-text">
+                  Paris<br />
+                  12 278 готелів
+                </p>
+              </li>
+            </ul>
+            <div class="arrow arrow-right" onclick="moveCarousel('right')">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="80"
+                height="100"
+                viewBox="0 0 80 100"
+                fill="none"
+              >
+                <path
+                  d="M32 66.6673L48.6667 50.0007L32 33.334"
+                  stroke="#266294"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h2 class="thelast-tittle">Італія</h2>
+            <div>
+              <a class="thelast-link" href="">Відкрити всі оголошення</a
+              ><br /><br />
+            </div>
+    
+            <div
+              class="arrow arrow-left two-section-tour arrow arrow-left-two"
+              onclick="moveCarousel('left')"
             >
-            <img
-              class="thefamous-list-item-img"
-              src="./image/1(4).webp"
-              alt=""
-            />
-            <p class="thefamous-list-itemt-text">Nantes 10 753 готелів</p>
-            <img
-              class="thefamous-list-item-img"
-              src="./image/2(4).webp"
-              alt=""
-            />
-            <p class="thefamous-list-itemt-text">Montpellier 11 386 готелів</p>
-            <img
-              class="thefamous-list-item-img"
-              src="./image/3(4).webp"
-              alt=""
-            />
-            <p class="thefamous-list-itemt-text">Paris 12 278 готелів</p>
-          </li>
-          <li>
-            <h2 class="thefamous-list-item-tittle">Італія</h2>
-            <a class="thefamous-list-item-link" href=""
-              >Відкрити всі оголошення</a
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="80"
+                height="100"
+                viewBox="0 0 80 100"
+                fill="none"
+              >
+                <path
+                  d="M48.6667 33L32 49.6667L48.6667 66.3333"
+                  stroke="#266294"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <ul id="italy_section">
+              <li class="thefamous">
+                <img src="./image/04.webp" alt="Venezia" />
+                <p class="thelast-list-item-text">Venezia <br />14 120 готелів</p>
+              </li>
+              <li class="thefamous">
+                <img src="./image/05.webp" alt="Firenze" />
+                <p class="thelast-list-item-text">
+                  Firenze<br />
+                  7 988 готелів
+                </p>
+              </li>
+              <li class="thefamous third-tour">
+                <img src="./image/06.webp" alt="Roma" />
+                <p class="thelast-list-item-text">
+                  Roma<br />
+                  12 809 готелів
+                </p>
+              </li>
+            </ul>
+            <div
+              class="arrow arrow-right two-section-tour arrow-right-two"
+              onclick="moveCarousel('right')"
             >
-            <img
-              class="thefamous-list-item-img"
-              src="./image/4(4).webp"
-              alt=""
-            />
-            <p class="thefamous-list-itemt-text">Venezia 14 120 готелів</p>
-            <img
-              class="thefamous-list-item-img"
-              src="./image/5(4).webp"
-              alt=""
-            />
-            <p class="thefamous-list-itemt-text">Firenze 7 988 готелів</p>
-            <img
-              class="thefamous-list-item-img"
-              src="./image/6(4).webp"
-              alt=""
-            />
-            <p class="thefamous-list-itemt-text">Roma 12 809 готелів</p>
-          </li>
-          <li>
-            <h2 class="thefamous-list-item-tittle">Іспанія</h2>
-            <a class="thefamous-list-item-link" href=""
-              >Відкрити всі оголошення</a
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="80"
+                height="100"
+                viewBox="0 0 80 100"
+                fill="none"
+              >
+                <path
+                  d="M32 66.6673L48.6667 50.0007L32 33.334"
+                  stroke="#266294"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h2 class="thelast-tittle">Іспанія</h2>
+            <div>
+              <a class="thelast-link" href="">Відкрити всі оголошення</a
+              ><br /><br />
+            </div>
+            <div
+              class="arrow arrow-left arrow-left-three"
+              onclick="moveCarousel('left')"
             >
-            <img
-              class="thefamous-list-item-img"
-              src="./image/7(4).webp"
-              alt=""
-            />
-            <p class="thefamous-list-itemt-text">Selvia 8 984готелів</p>
-            <img
-              class="thefamous-list-item-img"
-              src="./image/8(4).webp"
-              alt=""
-            />
-            <p class="thefamous-list-itemt-text">Madrit 15 325 готелів</p>
-            <img
-              class="thefamous-list-item-img"
-              src="./image/9(4).webp"
-              alt=""
-            />
-            <p class="thefamous-list-itemt-text">Mallorca 9 825 готелів</p>
-          </li>
-        </ul>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="80"
+                height="100"
+                viewBox="0 0 80 100"
+                fill="none"
+              >
+                <path
+                  d="M48.6667 33L32 49.6667L48.6667 66.3333"
+                  stroke="#266294"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <ul id="spain_section">
+              <li class="thefamous">
+                <img src="./image/07.webp" alt="Selvia" />
+                <p class="thelast-list-item-text">Selvia <br />8 984готелів</p>
+              </li>
+              <li class="thefamous">
+                <img src="./image/08.webp" alt="Madrit" />
+                <p class="thelast-list-item-text">
+                  Madrit<br />
+                  15 325 готелів
+                </p>
+              </li>
+              <li class="thefamous third-tour">
+                <img src="./image/09.webp" alt="Mallorca" />
+                <p class="thelast-list-item-text">
+                  Mallorca<br />
+                  9 825 готелів
+                </p>
+              </li>
+              <div
+                class="arrow arrow-right arrow-left-three"
+                onclick="moveCarousel('right')"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80"
+                  height="100"
+                  viewBox="0 0 80 100"
+                  fill="none"
+                >
+                  <path
+                    d="M32 66.6673L48.6667 50.0007L32 33.334"
+                    stroke="#266294"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
     <section class="thelast">
       <div class="container">
-        <h1 class="thelast-tittle">Останні оголошення</h1>
-
-        <a class="thelast-link" href="">Відкрити всі оголошення</a>
-        <ul class="thelast-list">
-          <li>
-            <img src="./image1/1(5).webp" alt="Тур 1" />
-            <p class="thelast-list-itemt-text">Vila Gale Lagos Hote</p>
-            <p class="thelast-list-item-textcountry">Andresen, Portugal</p>
-            <img
-              class="section-list-item-icon"
-              src="./image1/star.svg"
-              alt=""
-            />
-            <p class="thelast-list-item-textgrade">7,1</p>
-          </li>
-          <li>
-            <img src="./image1/2(5).webp" alt="Тур 2" />
-            <p class="thelast-list-itemt-text">Cala Moresca</p>
-            <p class="thelast-list-item-textcountry">Via Faro, Italy</p>
-            <div class="star">
-              <img
-                class="section-list-item-icon"
-                src="./image1/star.svg"
-                alt=""
-              />
-            </div>
-            <p class="thelast-list-item-textgrade">8,6</p>
-          </li>
-          <li>
-            <img src="./image1/3(5).webp" alt="Тур 3" />
-            <p class="thelast-list-itemt-text">Horison Blu</p>
-            <p class="thelast-list-item-textcountry">
-              Petrou Karakousi, Greece
-            </p>
-            <div class="star">
-              <img
-                class="section-list-item-icon"
-                src="./image1/star.svg"
-                alt=""
-              />
-            </div>
-            <p class="thelast-list-item-textgrade">5,9</p>
-          </li>
-          <li>
-            <img src="./image1/4(5).webp" alt="Тур 4" />
-            <p class="thelast-list-itemt-text">Le Galion Hotel</p>
-            <p class="thelast-list-item-textcountry">
-              Saint-Martin-de-Re, France
-            </p>
-            <div class="star">
-              <img
-                class="section-list-item-icon"
-                src="./image1/star.svg"
-                alt=""
-              />
-            </div>
-            <p class="thelast-list-item-textgrade">8,4</p>
-          </li>
-          <li>
-            <img src="./image1/5(5).webp" alt="Тур 5" />
-            <p class="thelast-list-itemt-text">Molitor Hotel</p>
-            <p class="thelast-list-item-textcountry">Paris, France</p>
-            <img
-              class="section-list-item-icon"
-              src="./image1/star.svg"
-              alt=""
-            />
-            <p class="thelast-list-item-textgrade">6,9</p>
-          </li>
-          <li>
-            <img src="./image1/6(5).webp" alt="Тур 6" />
-            <p class="thelast-list-itemt-text">Sierra de Meira</p>
-            <p class="thelast-list-item-textcountry">Madrid, Spain</p>
-            <div class="star">
-              <img
-                class="section-list-item-icon"
-                src="./image1/star.svg"
-                alt=""
-              />
-            </div>
-            <p class="thelast-list-item-textgrade">7,4</p>
-          </li>
-          <li>
-            <img src="./image1/7(5).webp" alt="Тур 7" />
-            <p class="thelast-list-itemt-text">Petit Hotel</p>
-            <p class="thelast-list-item-textcountry">Madrid, Spain</p>
-            <div class="star">
-              <img
-                class="section-list-item-icon"
-                src="./image1/star.svg"
-                alt=""
-              />
-            </div>
-            <p class="thelast-list-item-textgrade">7,2</p>
-          </li>
-          <li>
-            <img src="./image1/8(5).webp" alt="Тур 8" />
-            <p class="thelast-list-itemt-text">Gran Hotel</p>
-            <p class="thelast-list-item-textcountry">Alicante, Spain</p>
-            <div class="star">
-              <img
-                class="section-list-item-icon"
-                src="./image1/star.svg"
-                alt=""
-              />
-            </div>
-            <p class="thelast-list-item-textgrade">8,9</p>
-          </li>
-          <li>
-            <img src="./image1/9(5).webp" alt="Тур 9" />
-            <p class="thelast-list-itemt-text">KViHotel</p>
-            <p class="thelast-list-item-textcountry">Madrid, Spain</p>
-            <div class="tour-item">
-              <img
-                class="section-list-item-icon"
-                src="./image1/star.svg"
-                alt=""
-              />
-            </div>
-            <p class="thelast-list-item-textgrade">7,2</p>
-          </li>
-        </ul>
+        <div id="last_ads_section">
+          <h1 class="thelast-tittle">Останні оголошення</h1>
+          <div>
+            <a class="thelast-link" href="">Відкрити всі оголошення</a>
+          </div>
+          <ul class="last">
+            <li class="thelast">
+              <img src="./image1/01.webp" alt="Vila Gale Lagos Hote" />
+              <p class="thelast-list-item-text">Vila Gale Lagos Hote</p>
+              <p class="thelast-list-item-textcountry">Andresen, Portugal</p>
+              <p>
+                <img
+                  class="section-list-item-icon"
+                  src="./image1/star.svg"
+                  alt=""
+                />
+                7,1
+              </p>
+            </li>
+            <li class="thelast">
+              <img src="./image1/02.webp" alt="Cala Moresca" />
+              <p class="thelast-list-item-text">Cala Moresca</p>
+              <p class="thelast-list-item-textcountry">Via Faro, Italy</p>
+              <p>
+                <img
+                  class="section-list-item-icon"
+                  src="./image1/star.svg"
+                  alt=""
+                />
+                8,6
+              </p>
+            </li>
+            <li class="thelast">
+              <img src="./image1/03.webp" alt="Horison Blu" />
+              <p class="thelast-list-item-text">Horison Blu</p>
+              <p class="thelast-list-item-textcountry">Petrou Karakousi, Greece</p>
+              <p>
+                <img
+                  class="section-list-item-icon"
+                  src="./image1/star.svg"
+                  alt=""
+                />
+                8,4
+              </p>
+            </li>
+            <li class="thelast">
+              <img src="./image1/04.webp" alt="Le Galion Hotel" />
+              <p class="thelast-list-item-text">Le Galion Hotel</p>
+              <p class="thelast-list-item-textcountry">
+                Saint-Martin-de-Re, France
+              </p>
+              <p>
+                <img
+                  class="section-list-item-icon"
+                  src="./image1/star.svg"
+                  alt=""
+                />
+                6,9
+              </p>
+            </li>
+    
+            <li class="thelast">
+              <img src="./image1/05.webp" alt="Molitor Hotel" />
+              <p class="thelast-list-item-text">Molitor Hotel</p>
+              <p class="thelast-list-item-textcountry">Paris, France</p>
+              <p>
+                <img
+                  class="section-list-item-icon"
+                  src="./image1/star.svg"
+                  alt=""
+                />
+                7,2
+              </p>
+            </li>
+    
+            <li class="thelast">
+              <img src="./image1/06.webp" alt="Sierra de Meira" />
+              <p class="thelast-list-item-text">Sierra de Meira</p>
+              <p class="thelast-list-item-textcountry">Madrid, Spain</p>
+              <p>
+                <img
+                  class="section-list-item-icon"
+                  src="./image1/star.svg"
+                  alt=""
+                />
+                8,9
+              </p>
+            </li>
+    
+            <li class="thelast">
+              <img src="./image1/07.webp" alt="Petit Hotel" />
+              <p class="thelast-list-item-text">Petit Hotel</p>
+              <p class="thelast-list-item-textcountry">Madrid, Spain</p>
+              <p>
+                <img
+                  class="section-list-item-icon"
+                  src="./image1/star.svg"
+                  alt=""
+                />
+                8,9
+              </p>
+            </li>
+    
+            <li class="thelast">
+              <img src="./image1/08.webp" alt="Gran Hotel" />
+              <p class="thelast-list-item-text">Gran Hotel</p>
+              <p class="thelast-list-item-textcountry">Alicante, Spain</p>
+              <p>
+                <img
+                  class="section-list-item-icon"
+                  src="./image1/star.svg"
+                  alt=""
+                />
+                8,9
+              </p>
+            </li>
+    
+            <li class="thelast">
+              <img src="./image1/09.webp" alt="KViHotel" />
+              <p class="thelast-list-item-text">KViHotel</p>
+              <p class="thelast-list-item-textcountry">Madrid, Spain</p>
+              <p>
+                <img
+                  class="section-list-item-icon"
+                  src="./image1/star.svg"
+                  alt=""
+                />
+                8,9
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
-    <section class="footer">
-      <div class="footer-navigate">
-        <p class="footer-text-navigate">Головна</p>
-        <p class="footer-text-navigate">Всі оголошення</p>
-        <p class="footer-text-navigate">Обране</p>
-        <p class="footer-text-navigate">Особистий кабінет</p>
-      </div>
-      <p class="footer-text">©Всі права захищені.</p>
-      <div class="footer-logotype">
-        <img class="footer-img-earth" src="./imgmenu/earthpin.svg" alt="" />
-        <img class="footer-img-map" src="./imgmenu/mappin.svg" alt="" />
-        <p class="footer-text-logotype">See world</p>
-      </div>
-      <div class="footer-social">
-        <img class="footer-img-social" src="./imgmenu/facebook .svg" alt="" />
-        <img class="footer-img-social" src="./imgmenu/instagram.svg" alt="" />
-        <img class="footer-img-social" src="./imgmenu/twitter.svg" alt="" />
-        <img class="footer-img-social" src="./imgmenu/youtube.svg" alt="" />
-      </div>
+<section class="footer">
+        <div class="footer-navigate">
+          <p class="footer-text-navigate">Головна</p>
+          <p class="footer-text-navigate">Всі оголошення</p>
+          <p class="footer-text-navigate">Обране</p>
+          <p class="footer-text-navigate">Особистий кабінет</p>
+        </div>
+        <p class="footer-text">©Всі права захищені.</p>
+        <div class="footer-logotype">
+          <img class="footer-img-earth" src="./imgmenu/earthpin.svg" alt="" />
+          <img class="footer-img-map" src="./imgmenu/mappin.svg" alt="map" />
+          <p class="footer-text-logotype">See world</p>
+        </div>
+        <div class="footer-social">
+          <img class="footer-img-social" src="./imgmenu/facebook .svg" alt="facebook" />
+          <img class="footer-img-social" src="./imgmenu/instagram.svg" alt="instagram" />
+          <img class="footer-img-social" src="./imgmenu/twitter.svg" alt="twitter" />
+          <img class="footer-img-social" src="./imgmenu/youtube.svg" alt="youtube" />
+        </div>
+      
     </section>
     <script src="./index.js"></script>
   </body>
