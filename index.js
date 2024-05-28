@@ -8,8 +8,6 @@ const listEl = document.querySelector(".criteria-list");
 const modalEl = document.querySelector(".background");
 const modalInnerEl = document.querySelector(".modal-content");
 const closeModalbtn = document.querySelector(".close-btn");
-const openModalbtn = document.querySelector(".open-btn");
-
 listEl.addEventListener("click", (event) => {
   if (event.target === event.currentTarget) {
     return;
@@ -27,11 +25,6 @@ listEl.addEventListener("click", (event) => {
     <p class="modal-text">${dataCard.text}</p>`;
 });
 
-openModalbtn.addEventListener("click", () => {
-  modalEl.classList.remove("is-hidden");
-
-  window.addEventListener("keydown", pressEscape);
-});
 
 closeModalbtn.addEventListener("click", (event) => {
   event.stopPropagation();
@@ -47,19 +40,12 @@ modalEl.addEventListener("click", (event) => {
     window.removeEventListener("keydown", pressEscape);
   }
 });
-
 function pressEscape(event) {
   if (event.code === "Escape") {
     modalEl.classList.add("is-hidden");
     window.removeEventListener("keydown", pressEscape);
   }
 }
-
-
-
-
-
-
 const exampldata = [
   { id: "1", src: "./image/01.webp", text: "Nantes <br>10 753 готелі" },
   { id: "2", src: "./image/02.webp", text: "Montpellier <br>11 386 готелів" },
@@ -74,7 +60,6 @@ const exampldata = [
 const listElem = document.querySelectorAll(".tour-list");
 const examplmodalEl = document.querySelector(".section4-background");
 const examplcloseModalbtn = document.querySelector(".section4-close-btn");
-const examplopenModalbtn = document.querySelector(".section4-open-btn");
 const examplInnerEl = document.querySelector(".section4-modal-content");
 
 listElem[0].addEventListener("click", handleCliCard);
@@ -87,7 +72,7 @@ function handleCliCard(event) {
   }
   const examplliEl = event.target.closest(".tour-list-item");
   examplmodalEl.classList.remove("is-hidden");
-  window.addEventListener("keydown", pressEscape);
+  window.addEventListener("keydown", pressEscapeCards);
   console.log(examplliEl);
   const examplidx = examplliEl.dataset.id;
   const exampldataCard = exampldata.find((elem) => {
@@ -98,30 +83,27 @@ function handleCliCard(event) {
         <img class="section4-modal-img" src="${exampldataCard.src}" alt="${exampldataCard.text}"> 
         <p class="section4-modal-text">${exampldataCard.text}</p>`;
 }
-examplopenModalbtn.addEventListener("click", () => {
-  examplmodalEl.classList.remove("is-hidden");
 
-  window.addEventListener("keydown", pressEscape);
-});
 
 examplcloseModalbtn.addEventListener("click", (event) => {
   event.stopPropagation();
   examplmodalEl.classList.add("is-hidden");
 
-  window.removeEventListener("keydown", pressEscape);
+  window.removeEventListener("keydown", pressEscapeCards);
 });
 
 examplmodalEl.addEventListener("click", (event) => {
   if (event.target === event.currentTarget) {
     examplmodalEl.classList.add("is-hidden");
 
-    window.removeEventListener("keydown", pressEscape);
+    window.removeEventListener("keydown", pressEscapeCards);
   }
 });
 
-function pressEscape(event) {
+function pressEscapeCards(event) {
+  console.log(event);
   if (event.code === "Escape") {
     examplmodalEl.classList.add("is-hidden");
-    window.removeEventListener("keydown", pressEscape);
+    window.removeEventListener("keydown", pressEscapeCards);
   }
 }
